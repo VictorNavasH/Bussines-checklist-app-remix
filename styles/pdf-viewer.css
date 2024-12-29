@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pdf-toolbar {
+  @apply fixed top-4 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 rounded-full shadow-lg;
+  backdrop-filter: blur(8px);
+}
+
+.tool-button {
+  @apply rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors;
+}
+
+.color-button {
+  @apply rounded-full w-6 h-6 transition-transform hover:scale-110;
+}
+
+.color-button.active {
+  @apply ring-2 ring-offset-2;
+}
+
+.annotation-layer {
+  @apply absolute top-0 left-0 w-full h-full pointer-events-none;
+}
+
+.annotation-layer.active {
+  @apply pointer-events-auto cursor-crosshair;
+}
